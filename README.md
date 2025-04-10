@@ -1,16 +1,74 @@
-# app_gemini
+# 👨‍🍳 Chef de Voz
 
-A new Flutter project.
+O **Chef de Voz** é um aplicativo Flutter que utiliza reconhecimento de voz e inteligência artificial para sugerir receitas criativas com os ingredientes que você tem em casa. Basta falar os ingredientes, e o Chef te responde com uma ou mais receitas práticas, com um toque divertido e amigável.
 
-## Getting Started
+## 🚀 Funcionalidades
 
-This project is a starting point for a Flutter application.
+- 🎙️ Reconhecimento de voz com `speech_to_text`
+- 🤖 Geração de receitas usando a API Gemini (Google AI)
+- 📄 Exibição das receitas com suporte a Markdown
+- 🧑‍🍳 Interface intuitiva e amigável
+- 🔥 Botão de microfone animado
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Tecnologias Utilizadas
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Flutter](https://flutter.dev/)
+- [speech_to_text](https://pub.dev/packages/speech_to_text)
+- [flutter_markdown](https://pub.dev/packages/flutter_markdown)
+- [HTTP](https://pub.dev/packages/http)
+- Google Gemini API (via HTTP request)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 Dependências
+
+Adicione ao `pubspec.yaml`:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  speech_to_text: ^6.3.0
+  flutter_markdown: ^0.6.14
+  http: ^0.14.0
+```
+
+> ⚠️ Lembre-se de substituir a chave da API Gemini no código por sua própria chave obtida em:  
+> [Google AI Studio](https://makersuite.google.com/app)
+
+## 📲 Como rodar o app
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/chef-de-voz.git
+   cd chef-de-voz
+   ```
+
+2. Instale as dependências:
+   ```bash
+   flutter pub get
+   ```
+
+3. Rode o app:
+   ```bash
+   flutter run
+   ```
+
+> Obs: Para utilizar o reconhecimento de voz, certifique-se de testar em um **dispositivo físico** (Android ou iOS) com permissão para uso do microfone.
+
+## 📁 Estrutura do Projeto
+
+```
+lib/
+├── main.dart             # Tela principal e lógica do app
+assets/
+└── images/
+    └── chef_logo.png     # Logo do Chef de Voz
+```
+
+## 💡 Ideias Futuras
+
+- 🎨 Tela splash e transições suaves
+- 🧾 Histórico de receitas
+- 🗣️ Resposta falada usando TTS
+- 📱 Compartilhar receitas em redes sociais
+
+---
